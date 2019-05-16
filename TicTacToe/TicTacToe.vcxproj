@@ -117,9 +117,11 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="menu.cpp" />
+    <ClCompile Include="pve.cpp" />
     <ClCompile Include="pvp.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="pve.h" />
     <ClInclude Include="pvp.h" />
     <ClInclude Include="menu.h" />
   </ItemGroup>

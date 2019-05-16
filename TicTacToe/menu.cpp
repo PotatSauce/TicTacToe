@@ -1,5 +1,7 @@
 #include "menu.h"
 #include "pvp.h"
+#include "pve.h"
+
 void Meniu::Spausdinimas()
 {
 	system("cls");
@@ -24,12 +26,13 @@ void Meniu::Pasirinkimas()
 	cin >> Numeris;
 	if (1 == Numeris)
 	{
-		Zaidimas1 zaidimas;
-		zaidimas.Ivedimas();
+		Zaidimas1 zaidimas1;
+		zaidimas1.Ivedimas();
 	}
 	if (2 == Numeris)
 	{
-		;
+		Zaidimas2 zaidimas2;
+		zaidimas2.Pasirinkimas();;
 	}
 	if (3 == Numeris)
 	{

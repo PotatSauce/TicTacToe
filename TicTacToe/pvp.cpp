@@ -37,39 +37,7 @@ void Zaidimas1::Ivedimas()
 		Simbolis = (Zaidejas == 1) ? 'X' : '0';
 		if (1 <= Vieta && Vieta <= 9)
 		{
-			if (Vieta == 1 && Lenta[Vieta - 1] == '1')
-			{
-				Lenta[Vieta - 1] = Simbolis;
-			}
-			else if (Vieta == 2 && Lenta[Vieta - 1] == '2')
-			{
-				Lenta[Vieta - 1] = Simbolis;
-			}
-			else if (Vieta == 3 && Lenta[Vieta - 1] == '3')
-			{
-				Lenta[Vieta - 1] = Simbolis;
-			}
-			else if (Vieta == 4 && Lenta[Vieta - 1] == '4')
-			{
-				Lenta[Vieta - 1] = Simbolis;
-			}
-			else if (Vieta == 5 && Lenta[Vieta - 1] == '5')
-			{
-				Lenta[Vieta - 1] = Simbolis;
-			}
-			else if (Vieta == 6 && Lenta[Vieta - 1] == '6')
-			{
-				Lenta[Vieta - 1] = Simbolis;
-			}
-			else if (Vieta == 7 && Lenta[Vieta - 1] == '7')
-			{
-				Lenta[Vieta - 1] = Simbolis;
-			}
-			else if (Vieta == 8 && Lenta[Vieta - 1] == '8')
-			{
-				Lenta[Vieta - 1] = Simbolis;
-			}
-			else if (Vieta == 9 && Lenta[Vieta - 1] == '9')
+			if (Lenta[Vieta - 1] != 'X' && Lenta[Vieta - 1] != '0')
 			{
 				Lenta[Vieta - 1] = Simbolis;
 			}
