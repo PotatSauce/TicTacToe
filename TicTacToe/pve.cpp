@@ -385,7 +385,6 @@ void Zaidimas2::Puolimas()
 void Zaidimas2::PuolimasRandom()
 {
 	int Random;
-	srand((unsigned int)time(NULL));
 	Random = rand() % 8 - 0;
 	if (Lenta[Random] == PriesoSimbolis && Lenta[Random] == ManoSimbolis)
 	{
