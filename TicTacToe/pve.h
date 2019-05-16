@@ -6,8 +6,8 @@
 class Zaidimas2 : public Zaidimas1
 {
 private:
-	int Dar, Laimetojas, Ejimas;
-	char ManoSimbolis = '-', PriesoSimbolis = '-';
+	int Laimetojas, Ejimas = 1;
+	char ManoSimbolis = '-', PriesoSimbolis = '-', Dar;
 public:
 	virtual void Ivedimas();
 	virtual void Ikelimas();

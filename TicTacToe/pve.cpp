@@ -54,8 +54,7 @@ void Zaidimas2::Pasirinkimas()
 
 void Zaidimas2::Ivedimas()
 {
-	int Ejimas = 1, Vieta, Laimetojas;
-	char Dar;
+	int Vieta;
 	do
 	{
 		Ikelimas();
@@ -135,109 +134,108 @@ void Zaidimas2::Kompiuteris()
 
 void Zaidimas2::Ginyba()
 {
-	if (Lenta[0] == ManoSimbolis && Lenta[1] == ManoSimbolis && Lenta[2] != PriesoSimbolis)
+	if (Lenta[0] == ManoSimbolis && Lenta[1] == ManoSimbolis && Lenta[2] == '3')
 	{
 		Lenta[2] = PriesoSimbolis;
 	}
-	else if (Lenta[0] == ManoSimbolis && Lenta[2] == ManoSimbolis && Lenta[1] != PriesoSimbolis)
+	else if (Lenta[0] == ManoSimbolis && Lenta[2] == ManoSimbolis && Lenta[1] == '2')
 	{
 		Lenta[1] = PriesoSimbolis;
 	}
-	else if (Lenta[1] == ManoSimbolis && Lenta[2] == ManoSimbolis && Lenta[0] != PriesoSimbolis)
+	else if (Lenta[1] == ManoSimbolis && Lenta[2] == ManoSimbolis && Lenta[0] == '1')
 	{
 		Lenta[0] = PriesoSimbolis;
 	}
-
-	else if (Lenta[3] == ManoSimbolis && Lenta[4] == ManoSimbolis && Lenta[5] != PriesoSimbolis)
+	else if (Lenta[3] == ManoSimbolis && Lenta[4] == ManoSimbolis && Lenta[5] == '6')
 	{
 		Lenta[5] = PriesoSimbolis;
 	}
-	else if (Lenta[3] == ManoSimbolis && Lenta[5] == ManoSimbolis && Lenta[4] != PriesoSimbolis)
+	else if (Lenta[3] == ManoSimbolis && Lenta[5] == ManoSimbolis && Lenta[4] == '5')
 	{
 		Lenta[4] = PriesoSimbolis;
 	}
-	else if (Lenta[4] == ManoSimbolis && Lenta[5] == ManoSimbolis && Lenta[3] != PriesoSimbolis)
+	else if (Lenta[4] == ManoSimbolis && Lenta[5] == ManoSimbolis && Lenta[3] == '4')
 	{
 		Lenta[3] = PriesoSimbolis;
 	}
-	if (Lenta[6] == ManoSimbolis && Lenta[7] == ManoSimbolis && Lenta[8] != PriesoSimbolis)
+	else if (Lenta[6] == ManoSimbolis && Lenta[7] == ManoSimbolis && Lenta[8] == '9')
 	{
 		Lenta[8] = PriesoSimbolis;
 	}
-	else if (Lenta[6] == ManoSimbolis && Lenta[8] == ManoSimbolis && Lenta[7] != PriesoSimbolis)
+	else if (Lenta[6] == ManoSimbolis && Lenta[8] == ManoSimbolis && Lenta[7] == '8')
 	{
 		Lenta[7] = PriesoSimbolis;
 	}
-	else if (Lenta[7] == ManoSimbolis && Lenta[8] == ManoSimbolis && Lenta[6] != PriesoSimbolis)
+	else if (Lenta[7] == ManoSimbolis && Lenta[8] == ManoSimbolis && Lenta[6] == '7')
 	{
 		Lenta[6] = PriesoSimbolis;
 	}
-	else if (Lenta[0] == ManoSimbolis && Lenta[3] == ManoSimbolis && Lenta[6] != PriesoSimbolis)
+	else if (Lenta[0] == ManoSimbolis && Lenta[3] == ManoSimbolis && Lenta[6] == '7')
 	{
 		Lenta[6] = PriesoSimbolis;
 	}
-	else if (Lenta[0] == ManoSimbolis && Lenta[6] == ManoSimbolis && Lenta[3] != PriesoSimbolis)
+	else if (Lenta[0] == ManoSimbolis && Lenta[6] == ManoSimbolis && Lenta[3] == '4')
 	{
 		Lenta[3] = PriesoSimbolis;
 	}
-	else if (Lenta[3] == ManoSimbolis && Lenta[6] == ManoSimbolis && Lenta[0] != PriesoSimbolis)
+	else if (Lenta[3] == ManoSimbolis && Lenta[6] == ManoSimbolis && Lenta[0] == '1')
 	{
 		Lenta[0] = PriesoSimbolis;
 	}
-	else if (Lenta[1] == ManoSimbolis && Lenta[4] == ManoSimbolis && Lenta[7] != PriesoSimbolis)
+	else if (Lenta[1] == ManoSimbolis && Lenta[4] == ManoSimbolis && Lenta[7] == '8')
 	{
 		Lenta[7] = PriesoSimbolis;
 	}
-	else if (Lenta[1] == ManoSimbolis && Lenta[7] == ManoSimbolis && Lenta[4] != PriesoSimbolis)
+	else if (Lenta[1] == ManoSimbolis && Lenta[7] == ManoSimbolis && Lenta[4] == '5')
 	{
 		Lenta[4] = PriesoSimbolis;
 	}
-	else if (Lenta[0] == ManoSimbolis && Lenta[1] == ManoSimbolis && Lenta[1] != PriesoSimbolis)
+	else if (Lenta[0] == ManoSimbolis && Lenta[1] == ManoSimbolis && Lenta[1] == '2')
 	{
 		Lenta[1] = PriesoSimbolis;
 	}
-	else if (Lenta[2] == ManoSimbolis && Lenta[5] == ManoSimbolis && Lenta[8] != PriesoSimbolis)
+	else if (Lenta[2] == ManoSimbolis && Lenta[5] == ManoSimbolis && Lenta[8] == '9')
 	{
 		Lenta[8] = PriesoSimbolis;
 	}
-	else if (Lenta[2] == ManoSimbolis && Lenta[8] == ManoSimbolis && Lenta[5] != PriesoSimbolis)
+	else if (Lenta[2] == ManoSimbolis && Lenta[8] == ManoSimbolis && Lenta[5] == '6')
 	{
 		Lenta[5] = PriesoSimbolis;
 	}
-	else if (Lenta[5] == ManoSimbolis && Lenta[8] == ManoSimbolis && Lenta[2] != PriesoSimbolis)
+	else if (Lenta[5] == ManoSimbolis && Lenta[8] == ManoSimbolis && Lenta[2] == '3')
 	{
 		Lenta[2] = PriesoSimbolis;
 	}
-	else if (Lenta[0] == ManoSimbolis && Lenta[4] == ManoSimbolis && Lenta[8] != PriesoSimbolis)
+	else if (Lenta[0] == ManoSimbolis && Lenta[4] == ManoSimbolis && Lenta[8] == '9')
 	{
 		Lenta[8] = PriesoSimbolis;
 	}
-	else if (Lenta[0] == ManoSimbolis && Lenta[8] == ManoSimbolis && Lenta[4] != PriesoSimbolis)
+	else if (Lenta[0] == ManoSimbolis && Lenta[8] == ManoSimbolis && Lenta[4] == '5')
 	{
 		Lenta[4] = PriesoSimbolis;
 	}
-	else if (Lenta[4] == ManoSimbolis && Lenta[8] == ManoSimbolis && Lenta[0] != PriesoSimbolis)
+	else if (Lenta[4] == ManoSimbolis && Lenta[8] == ManoSimbolis && Lenta[0] == '1')
 	{
 		Lenta[0] = PriesoSimbolis;
 	}
-	else if (Lenta[2] == ManoSimbolis && Lenta[4] == ManoSimbolis && Lenta[6] != PriesoSimbolis)
+	else if (Lenta[2] == ManoSimbolis && Lenta[4] == ManoSimbolis && Lenta[6] == '7')
 	{
 		Lenta[6] = PriesoSimbolis;
 	}
-	else if (Lenta[2] == ManoSimbolis && Lenta[6] == ManoSimbolis && Lenta[4] != PriesoSimbolis)
+	else if (Lenta[2] == ManoSimbolis && Lenta[6] == ManoSimbolis && Lenta[4] == '5')
 	{
 		Lenta[4] = PriesoSimbolis;
 	}
-	else if (Lenta[4] == ManoSimbolis && Lenta[6] == ManoSimbolis && Lenta[2] != PriesoSimbolis)
+	else if (Lenta[4] == ManoSimbolis && Lenta[6] == ManoSimbolis && Lenta[2] == '3')
 	{
 		Lenta[2] = PriesoSimbolis;
 	}
 	else PuolimasRandom();
 	Laimetojas = Tikrinimas();
 	if (Laimetojas == 0)
-		Ivedimas();
-	if (Laimetojas == -1)
 		Lygiosios();
+	if (Laimetojas == -1)
+		Ivedimas();
 	if (Laimetojas == 1)
 	{
 		Ikelimas();
@@ -273,70 +271,77 @@ void Zaidimas2::Ginyba()
 
 void Zaidimas2::Puolimas()
 {
-	if ((Lenta[0] == PriesoSimbolis && Lenta[1] == PriesoSimbolis) || (Lenta[0] == PriesoSimbolis || Lenta[2] == PriesoSimbolis) || (Lenta[1] == PriesoSimbolis || Lenta[2] == PriesoSimbolis))
+	if (((Lenta[0] == PriesoSimbolis && Lenta[1] == PriesoSimbolis) || (Lenta[0] == PriesoSimbolis && Lenta[2] == PriesoSimbolis) || (Lenta[1] == PriesoSimbolis && Lenta[2] == PriesoSimbolis)) && (Lenta[0] != ManoSimbolis && Lenta[1] != ManoSimbolis && Lenta[2] != ManoSimbolis))
 	{
 		if (Lenta[0] == '1')
 			Lenta[0] = PriesoSimbolis;
 		else if (Lenta[1] == '2')
 			Lenta[1] = PriesoSimbolis;
-		else Lenta[2] = PriesoSimbolis;
+		else if (Lenta[2] == '3')
+			Lenta[2] = PriesoSimbolis;
 	}
-	else if ((Lenta[3] == PriesoSimbolis && Lenta[4] == PriesoSimbolis) || (Lenta[3] == PriesoSimbolis || Lenta[5] == PriesoSimbolis) || (Lenta[4] == PriesoSimbolis || Lenta[5] == PriesoSimbolis))
+	else if (((Lenta[3] == PriesoSimbolis && Lenta[4] == PriesoSimbolis) || (Lenta[3] == PriesoSimbolis && Lenta[5] == PriesoSimbolis) || (Lenta[4] == PriesoSimbolis && Lenta[5] == PriesoSimbolis)) && (Lenta[3] != ManoSimbolis && Lenta[4] != ManoSimbolis && Lenta[5] != ManoSimbolis))
 	{
 		if (Lenta[3] == '4')
 			Lenta[3] = PriesoSimbolis;
 		else if (Lenta[4] == '5')
 			Lenta[4] = PriesoSimbolis;
-		else Lenta[5] = PriesoSimbolis;
-		Tikrinimas();
+		else if (Lenta[5] == '6')
+			Lenta[5] = PriesoSimbolis;
 	}
-	else if ((Lenta[6] == PriesoSimbolis && Lenta[7] == PriesoSimbolis) || (Lenta[6] == PriesoSimbolis || Lenta[8] == PriesoSimbolis) || (Lenta[7] == PriesoSimbolis || Lenta[8] == PriesoSimbolis))
+	else if (((Lenta[6] == PriesoSimbolis && Lenta[7] == PriesoSimbolis) || (Lenta[6] == PriesoSimbolis && Lenta[8] == PriesoSimbolis) || (Lenta[7] == PriesoSimbolis && Lenta[8] == PriesoSimbolis)) && (Lenta[6] != ManoSimbolis && Lenta[7] != ManoSimbolis && Lenta[8] != ManoSimbolis))
 	{
 		if (Lenta[6] == '7')
 			Lenta[6] = PriesoSimbolis;
 		else if (Lenta[7] == '8')
 			Lenta[7] = PriesoSimbolis;
-		else Lenta[8] = PriesoSimbolis;
+		else if (Lenta[8] == '9')
+			Lenta[8] = PriesoSimbolis;
 	}
-	else if ((Lenta[0] == PriesoSimbolis && Lenta[3] == PriesoSimbolis) || (Lenta[0] == PriesoSimbolis || Lenta[6] == PriesoSimbolis) || (Lenta[3] == PriesoSimbolis || Lenta[6] == PriesoSimbolis))
+	else if (((Lenta[0] == PriesoSimbolis && Lenta[3] == PriesoSimbolis) || (Lenta[0] == PriesoSimbolis && Lenta[6] == PriesoSimbolis) || (Lenta[3] == PriesoSimbolis && Lenta[6] == PriesoSimbolis)) && (Lenta[0] != ManoSimbolis && Lenta[3] != ManoSimbolis && Lenta[6] != ManoSimbolis))
 	{
 		if (Lenta[0] == '1')
 			Lenta[0] = PriesoSimbolis;
 		else if (Lenta[3] == '4')
 			Lenta[3] = PriesoSimbolis;
-		else Lenta[6] = PriesoSimbolis;
+		else if (Lenta[6] == '7')
+			Lenta[6] = PriesoSimbolis;
 	}
-	else if ((Lenta[1] == PriesoSimbolis && Lenta[4] == PriesoSimbolis) || (Lenta[1] == PriesoSimbolis || Lenta[7] == PriesoSimbolis) || (Lenta[4] == PriesoSimbolis || Lenta[7] == PriesoSimbolis))
+	else if (((Lenta[1] == PriesoSimbolis && Lenta[4] == PriesoSimbolis) || (Lenta[1] == PriesoSimbolis && Lenta[7] == PriesoSimbolis) || (Lenta[4] == PriesoSimbolis && Lenta[7] == PriesoSimbolis)) && (Lenta[1] != ManoSimbolis && Lenta[4] != ManoSimbolis && Lenta[7] != ManoSimbolis))
 	{
 		if (Lenta[1] == '2')
 			Lenta[1] = PriesoSimbolis;
 		else if (Lenta[4] == '4')
 			Lenta[4] = PriesoSimbolis;
-		else Lenta[7] = PriesoSimbolis;
+		else if (Lenta[7] == '8')
+			Lenta[7] = PriesoSimbolis;
 	}
-	else if ((Lenta[2] == PriesoSimbolis && Lenta[5] == PriesoSimbolis) || (Lenta[2] == PriesoSimbolis || Lenta[8] == PriesoSimbolis) || (Lenta[5] == PriesoSimbolis || Lenta[8] == PriesoSimbolis))
+	else if (((Lenta[2] == PriesoSimbolis && Lenta[5] == PriesoSimbolis) || (Lenta[2] == PriesoSimbolis && Lenta[8] == PriesoSimbolis) || (Lenta[5] == PriesoSimbolis && Lenta[8] == PriesoSimbolis)) && (Lenta[2] != ManoSimbolis && Lenta[5] != ManoSimbolis && Lenta[8] != ManoSimbolis))
 	{
 		if (Lenta[2] == '3')
 			Lenta[2] = PriesoSimbolis;
 		else if (Lenta[5] == '6')
 			Lenta[5] = PriesoSimbolis;
-		else Lenta[8] = PriesoSimbolis;
+		else if (Lenta[8] == '9')
+			Lenta[8] = PriesoSimbolis;
 	}
-	else if ((Lenta[0] == PriesoSimbolis && Lenta[4] == PriesoSimbolis) || (Lenta[0] == PriesoSimbolis || Lenta[8] == PriesoSimbolis) || (Lenta[4] == PriesoSimbolis || Lenta[8] == PriesoSimbolis))
+	else if (((Lenta[0] == PriesoSimbolis && Lenta[4] == PriesoSimbolis) || (Lenta[0] == PriesoSimbolis && Lenta[8] == PriesoSimbolis) || (Lenta[4] == PriesoSimbolis && Lenta[8] == PriesoSimbolis)) && (Lenta[0] != ManoSimbolis && Lenta[4] != ManoSimbolis && Lenta[8] != ManoSimbolis))
 	{
 		if (Lenta[0] == '1')
 			Lenta[0] = PriesoSimbolis;
 		else if (Lenta[4] == '5')
 			Lenta[4] = PriesoSimbolis;
-		else Lenta[8] = PriesoSimbolis;
+		else if (Lenta[8] == '9')
+			Lenta[8] = PriesoSimbolis;
 	}
-	else if ((Lenta[2] == PriesoSimbolis && Lenta[4] == PriesoSimbolis) || (Lenta[2] == PriesoSimbolis || Lenta[6] == PriesoSimbolis) || (Lenta[4] == PriesoSimbolis || Lenta[6] == PriesoSimbolis))
+	else if (((Lenta[2] == PriesoSimbolis && Lenta[4] == PriesoSimbolis) || (Lenta[2] == PriesoSimbolis && Lenta[6] == PriesoSimbolis) || (Lenta[4] == PriesoSimbolis && Lenta[6] == PriesoSimbolis)) && (Lenta[2] != ManoSimbolis && Lenta[4] != ManoSimbolis && Lenta[6] != ManoSimbolis))
 	{
 		if (Lenta[2] == '3')
 			Lenta[2] = PriesoSimbolis;
 		else if (Lenta[4] == '5')
 			Lenta[4] = PriesoSimbolis;
-		else Lenta[6] = PriesoSimbolis;
+		else if (Lenta[6] == '7')
+			Lenta[6] = PriesoSimbolis;
 	}
 	else Ginyba();
 	Laimetojas = Tikrinimas();
@@ -380,8 +385,16 @@ void Zaidimas2::Puolimas()
 void Zaidimas2::PuolimasRandom()
 {
 	int Random;
-	srand(time(NULL));
-	Random = rand() % 8 + 0;
+	srand((unsigned int)time(NULL));
+	Random = rand() % 8 - 0;
+	if (Lenta[Random] == PriesoSimbolis && Lenta[Random] == ManoSimbolis)
+	{
+		Random = 0;
+		while (Lenta[Random] == PriesoSimbolis || Lenta[Random] == ManoSimbolis)
+		{
+			Random++;
+		}
+	}
 	if (Lenta[Random] != PriesoSimbolis && Lenta[Random] != ManoSimbolis)
 	{
 		Lenta[Random] = PriesoSimbolis;
@@ -422,7 +435,11 @@ void Zaidimas2::PuolimasRandom()
 			}
 		}
 	}
-	else PuolimasRandom();
+	else
+	{
+
+		PuolimasRandom();
+	}
 }
 
 int Zaidimas2::Tikrinimas()
