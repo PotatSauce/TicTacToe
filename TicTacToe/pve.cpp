@@ -40,7 +40,7 @@ void Zaidimas2::Pasirinkimas()
 	{
 		ManoSimbolis = '0';
 		PriesoSimbolis = 'X';
-		Ivedimas();
+		Kompiuteris();
 	}
 	else
 	{
