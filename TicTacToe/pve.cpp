@@ -30,20 +30,21 @@ void Zaidimas2::Pasirinkimas()
 	Ikelimas();
 	cout << "   Pasirinkite (X ar 0): ";
 	cin >> ManoSimbolis;
-	if (ManoSimbolis == 'X' || ManoSimbolis == 'x')
+	if (ManoSimbolis == "X" || ManoSimbolis == "x")
 	{
-		ManoSimbolis = 'X';
-		PriesoSimbolis = '0';
+		ManoSimbolis = "X";
+		PriesoSimbolis = "0";
 		Ivedimas();
 	}
-	if (ManoSimbolis == '0' || ManoSimbolis == 'o')
+	if (ManoSimbolis == "0" || ManoSimbolis == "o")
 	{
-		ManoSimbolis = '0';
-		PriesoSimbolis = 'X';
+		ManoSimbolis = "0";
+		PriesoSimbolis = "X";
 		Kompiuteris();
 	}
 	else
 	{
+		ManoSimbolis = "-";
 		Ikelimas();
 		cout << "   Ávestas netinkamas simbolis." << endl;
 		cin.ignore();
@@ -60,9 +61,15 @@ void Zaidimas2::Ivedimas()
 		Ikelimas();
 		cout << "   Jûsø ëjimas: ";
 		cin >> Vieta;
+		if (cin.fail())
+		{ 
+			cin.clear();
+			Ikelimas();
+			cin.get();
+		}
 		if (1 <= Vieta && Vieta <= 9)
 		{
-			if (Lenta[Vieta - 1] != 'X' && Lenta[Vieta - 1] != '0')
+			if (Lenta[Vieta - 1] != "X" && Lenta[Vieta - 1] != "0")
 			{
 				Lenta[Vieta - 1] = ManoSimbolis;
 				Ejimas = 0;
@@ -89,20 +96,20 @@ void Zaidimas2::Ivedimas()
 		Ikelimas();
 		cout << "   Jûs laimëjote! Þaisite dar kartà? (T/N): ";
 		cin >> Dar;
-		if (Dar == 'T' || Dar == 't')
+		if (Dar == "T" || Dar == "t")
 		{
 			Laimetojas = -1;
-			ManoSimbolis = '-';
-			PriesoSimbolis = '-';
+			ManoSimbolis = "-";
+			PriesoSimbolis = "-";
 			Ejimas = 1;
 			setLenta();
 			Pasirinkimas();
 		}
-		if (Dar == 'N' || Dar == 'n')
+		if (Dar == "N" || Dar == "n")
 		{
 			Laimetojas = -1;
-			ManoSimbolis = '-';
-			PriesoSimbolis = '-';
+			ManoSimbolis = "-";
+			PriesoSimbolis = "-";
 			Ejimas = 1;
 			setLenta();
 			meniu.Pasirinkimas();
@@ -128,105 +135,105 @@ void Zaidimas2::Kompiuteris()
 {
 	Ikelimas();
 	cout << "   Laukiama prieðininko." << endl;
-	this_thread::sleep_for(chrono::milliseconds(1500));
+	this_thread::sleep_for(chrono::milliseconds(1000));
 	Puolimas();
 }
 
 void Zaidimas2::Ginyba()
 {
-	if (Lenta[0] == ManoSimbolis && Lenta[1] == ManoSimbolis && Lenta[2] == '3')
+	if (Lenta[0] == ManoSimbolis && Lenta[1] == ManoSimbolis && Lenta[2] == "3")
 	{
 		Lenta[2] = PriesoSimbolis;
 	}
-	else if (Lenta[0] == ManoSimbolis && Lenta[2] == ManoSimbolis && Lenta[1] == '2')
+	else if (Lenta[0] == ManoSimbolis && Lenta[2] == ManoSimbolis && Lenta[1] == "2")
 	{
 		Lenta[1] = PriesoSimbolis;
 	}
-	else if (Lenta[1] == ManoSimbolis && Lenta[2] == ManoSimbolis && Lenta[0] == '1')
+	else if (Lenta[1] == ManoSimbolis && Lenta[2] == ManoSimbolis && Lenta[0] == "1")
 	{
 		Lenta[0] = PriesoSimbolis;
 	}
-	else if (Lenta[3] == ManoSimbolis && Lenta[4] == ManoSimbolis && Lenta[5] == '6')
+	else if (Lenta[3] == ManoSimbolis && Lenta[4] == ManoSimbolis && Lenta[5] == "6")
 	{
 		Lenta[5] = PriesoSimbolis;
 	}
-	else if (Lenta[3] == ManoSimbolis && Lenta[5] == ManoSimbolis && Lenta[4] == '5')
+	else if (Lenta[3] == ManoSimbolis && Lenta[5] == ManoSimbolis && Lenta[4] == "5")
 	{
 		Lenta[4] = PriesoSimbolis;
 	}
-	else if (Lenta[4] == ManoSimbolis && Lenta[5] == ManoSimbolis && Lenta[3] == '4')
+	else if (Lenta[4] == ManoSimbolis && Lenta[5] == ManoSimbolis && Lenta[3] == "4")
 	{
 		Lenta[3] = PriesoSimbolis;
 	}
-	else if (Lenta[6] == ManoSimbolis && Lenta[7] == ManoSimbolis && Lenta[8] == '9')
+	else if (Lenta[6] == ManoSimbolis && Lenta[7] == ManoSimbolis && Lenta[8] == "9")
 	{
 		Lenta[8] = PriesoSimbolis;
 	}
-	else if (Lenta[6] == ManoSimbolis && Lenta[8] == ManoSimbolis && Lenta[7] == '8')
+	else if (Lenta[6] == ManoSimbolis && Lenta[8] == ManoSimbolis && Lenta[7] == "8")
 	{
 		Lenta[7] = PriesoSimbolis;
 	}
-	else if (Lenta[7] == ManoSimbolis && Lenta[8] == ManoSimbolis && Lenta[6] == '7')
+	else if (Lenta[7] == ManoSimbolis && Lenta[8] == ManoSimbolis && Lenta[6] == "7")
 	{
 		Lenta[6] = PriesoSimbolis;
 	}
-	else if (Lenta[0] == ManoSimbolis && Lenta[3] == ManoSimbolis && Lenta[6] == '7')
+	else if (Lenta[0] == ManoSimbolis && Lenta[3] == ManoSimbolis && Lenta[6] == "7")
 	{
 		Lenta[6] = PriesoSimbolis;
 	}
-	else if (Lenta[0] == ManoSimbolis && Lenta[6] == ManoSimbolis && Lenta[3] == '4')
+	else if (Lenta[0] == ManoSimbolis && Lenta[6] == ManoSimbolis && Lenta[3] == "4")
 	{
 		Lenta[3] = PriesoSimbolis;
 	}
-	else if (Lenta[3] == ManoSimbolis && Lenta[6] == ManoSimbolis && Lenta[0] == '1')
+	else if (Lenta[3] == ManoSimbolis && Lenta[6] == ManoSimbolis && Lenta[0] == "1")
 	{
 		Lenta[0] = PriesoSimbolis;
 	}
-	else if (Lenta[1] == ManoSimbolis && Lenta[4] == ManoSimbolis && Lenta[7] == '8')
+	else if (Lenta[1] == ManoSimbolis && Lenta[4] == ManoSimbolis && Lenta[7] == "8")
 	{
 		Lenta[7] = PriesoSimbolis;
 	}
-	else if (Lenta[1] == ManoSimbolis && Lenta[7] == ManoSimbolis && Lenta[4] == '5')
+	else if (Lenta[1] == ManoSimbolis && Lenta[7] == ManoSimbolis && Lenta[4] == "5")
 	{
 		Lenta[4] = PriesoSimbolis;
 	}
-	else if (Lenta[0] == ManoSimbolis && Lenta[1] == ManoSimbolis && Lenta[1] == '2')
+	else if (Lenta[0] == ManoSimbolis && Lenta[1] == ManoSimbolis && Lenta[1] == "2")
 	{
 		Lenta[1] = PriesoSimbolis;
 	}
-	else if (Lenta[2] == ManoSimbolis && Lenta[5] == ManoSimbolis && Lenta[8] == '9')
+	else if (Lenta[2] == ManoSimbolis && Lenta[5] == ManoSimbolis && Lenta[8] == "9")
 	{
 		Lenta[8] = PriesoSimbolis;
 	}
-	else if (Lenta[2] == ManoSimbolis && Lenta[8] == ManoSimbolis && Lenta[5] == '6')
+	else if (Lenta[2] == ManoSimbolis && Lenta[8] == ManoSimbolis && Lenta[5] == "6")
 	{
 		Lenta[5] = PriesoSimbolis;
 	}
-	else if (Lenta[5] == ManoSimbolis && Lenta[8] == ManoSimbolis && Lenta[2] == '3')
+	else if (Lenta[5] == ManoSimbolis && Lenta[8] == ManoSimbolis && Lenta[2] == "3")
 	{
 		Lenta[2] = PriesoSimbolis;
 	}
-	else if (Lenta[0] == ManoSimbolis && Lenta[4] == ManoSimbolis && Lenta[8] == '9')
+	else if (Lenta[0] == ManoSimbolis && Lenta[4] == ManoSimbolis && Lenta[8] == "9")
 	{
 		Lenta[8] = PriesoSimbolis;
 	}
-	else if (Lenta[0] == ManoSimbolis && Lenta[8] == ManoSimbolis && Lenta[4] == '5')
+	else if (Lenta[0] == ManoSimbolis && Lenta[8] == ManoSimbolis && Lenta[4] == "5")
 	{
 		Lenta[4] = PriesoSimbolis;
 	}
-	else if (Lenta[4] == ManoSimbolis && Lenta[8] == ManoSimbolis && Lenta[0] == '1')
+	else if (Lenta[4] == ManoSimbolis && Lenta[8] == ManoSimbolis && Lenta[0] == "1")
 	{
 		Lenta[0] = PriesoSimbolis;
 	}
-	else if (Lenta[2] == ManoSimbolis && Lenta[4] == ManoSimbolis && Lenta[6] == '7')
+	else if (Lenta[2] == ManoSimbolis && Lenta[4] == ManoSimbolis && Lenta[6] == "7")
 	{
 		Lenta[6] = PriesoSimbolis;
 	}
-	else if (Lenta[2] == ManoSimbolis && Lenta[6] == ManoSimbolis && Lenta[4] == '5')
+	else if (Lenta[2] == ManoSimbolis && Lenta[6] == ManoSimbolis && Lenta[4] == "5")
 	{
 		Lenta[4] = PriesoSimbolis;
 	}
-	else if (Lenta[4] == ManoSimbolis && Lenta[6] == ManoSimbolis && Lenta[2] == '3')
+	else if (Lenta[4] == ManoSimbolis && Lenta[6] == ManoSimbolis && Lenta[2] == "3")
 	{
 		Lenta[2] = PriesoSimbolis;
 	}
@@ -241,20 +248,20 @@ void Zaidimas2::Ginyba()
 		Ikelimas();
 		cout << "   Jûs praimëjote. Þaisite dar kartà? (T/N): ";
 		cin >> Dar;
-		if (Dar == 'T' || Dar == 't')
+		if (Dar == "T" || Dar == "t")
 		{
 			Laimetojas = -1;
-			ManoSimbolis = '-';
-			PriesoSimbolis = '-';
+			ManoSimbolis = "-";
+			PriesoSimbolis = "-";
 			Ejimas = 1;
 			setLenta();
 			Pasirinkimas();
 		}
-		if (Dar == 'N' || Dar == 'n')
+		if (Dar == "N" || Dar == "n")
 		{
 			Laimetojas = -1;
-			ManoSimbolis = '-';
-			PriesoSimbolis = '-';
+			ManoSimbolis = "-";
+			PriesoSimbolis = "-";
 			Ejimas = 1;
 			setLenta();
 			meniu.Pasirinkimas();
@@ -273,74 +280,74 @@ void Zaidimas2::Puolimas()
 {
 	if (((Lenta[0] == PriesoSimbolis && Lenta[1] == PriesoSimbolis) || (Lenta[0] == PriesoSimbolis && Lenta[2] == PriesoSimbolis) || (Lenta[1] == PriesoSimbolis && Lenta[2] == PriesoSimbolis)) && (Lenta[0] != ManoSimbolis && Lenta[1] != ManoSimbolis && Lenta[2] != ManoSimbolis))
 	{
-		if (Lenta[0] == '1')
+		if (Lenta[0] == "1")
 			Lenta[0] = PriesoSimbolis;
-		else if (Lenta[1] == '2')
+		else if (Lenta[1] == "2")
 			Lenta[1] = PriesoSimbolis;
-		else if (Lenta[2] == '3')
+		else if (Lenta[2] == "3")
 			Lenta[2] = PriesoSimbolis;
 	}
 	else if (((Lenta[3] == PriesoSimbolis && Lenta[4] == PriesoSimbolis) || (Lenta[3] == PriesoSimbolis && Lenta[5] == PriesoSimbolis) || (Lenta[4] == PriesoSimbolis && Lenta[5] == PriesoSimbolis)) && (Lenta[3] != ManoSimbolis && Lenta[4] != ManoSimbolis && Lenta[5] != ManoSimbolis))
 	{
-		if (Lenta[3] == '4')
+		if (Lenta[3] == "4")
 			Lenta[3] = PriesoSimbolis;
-		else if (Lenta[4] == '5')
+		else if (Lenta[4] == "5")
 			Lenta[4] = PriesoSimbolis;
-		else if (Lenta[5] == '6')
+		else if (Lenta[5] == "6")
 			Lenta[5] = PriesoSimbolis;
 	}
 	else if (((Lenta[6] == PriesoSimbolis && Lenta[7] == PriesoSimbolis) || (Lenta[6] == PriesoSimbolis && Lenta[8] == PriesoSimbolis) || (Lenta[7] == PriesoSimbolis && Lenta[8] == PriesoSimbolis)) && (Lenta[6] != ManoSimbolis && Lenta[7] != ManoSimbolis && Lenta[8] != ManoSimbolis))
 	{
-		if (Lenta[6] == '7')
+		if (Lenta[6] == "7")
 			Lenta[6] = PriesoSimbolis;
-		else if (Lenta[7] == '8')
+		else if (Lenta[7] == "8")
 			Lenta[7] = PriesoSimbolis;
-		else if (Lenta[8] == '9')
+		else if (Lenta[8] == "9")
 			Lenta[8] = PriesoSimbolis;
 	}
 	else if (((Lenta[0] == PriesoSimbolis && Lenta[3] == PriesoSimbolis) || (Lenta[0] == PriesoSimbolis && Lenta[6] == PriesoSimbolis) || (Lenta[3] == PriesoSimbolis && Lenta[6] == PriesoSimbolis)) && (Lenta[0] != ManoSimbolis && Lenta[3] != ManoSimbolis && Lenta[6] != ManoSimbolis))
 	{
-		if (Lenta[0] == '1')
+		if (Lenta[0] == "1")
 			Lenta[0] = PriesoSimbolis;
-		else if (Lenta[3] == '4')
+		else if (Lenta[3] == "4")
 			Lenta[3] = PriesoSimbolis;
-		else if (Lenta[6] == '7')
+		else if (Lenta[6] == "7")
 			Lenta[6] = PriesoSimbolis;
 	}
 	else if (((Lenta[1] == PriesoSimbolis && Lenta[4] == PriesoSimbolis) || (Lenta[1] == PriesoSimbolis && Lenta[7] == PriesoSimbolis) || (Lenta[4] == PriesoSimbolis && Lenta[7] == PriesoSimbolis)) && (Lenta[1] != ManoSimbolis && Lenta[4] != ManoSimbolis && Lenta[7] != ManoSimbolis))
 	{
-		if (Lenta[1] == '2')
+		if (Lenta[1] == "2")
 			Lenta[1] = PriesoSimbolis;
-		else if (Lenta[4] == '4')
+		else if (Lenta[4] == "4")
 			Lenta[4] = PriesoSimbolis;
-		else if (Lenta[7] == '8')
+		else if (Lenta[7] == "8")
 			Lenta[7] = PriesoSimbolis;
 	}
 	else if (((Lenta[2] == PriesoSimbolis && Lenta[5] == PriesoSimbolis) || (Lenta[2] == PriesoSimbolis && Lenta[8] == PriesoSimbolis) || (Lenta[5] == PriesoSimbolis && Lenta[8] == PriesoSimbolis)) && (Lenta[2] != ManoSimbolis && Lenta[5] != ManoSimbolis && Lenta[8] != ManoSimbolis))
 	{
-		if (Lenta[2] == '3')
+		if (Lenta[2] == "3")
 			Lenta[2] = PriesoSimbolis;
-		else if (Lenta[5] == '6')
+		else if (Lenta[5] == "6")
 			Lenta[5] = PriesoSimbolis;
-		else if (Lenta[8] == '9')
+		else if (Lenta[8] == "9")
 			Lenta[8] = PriesoSimbolis;
 	}
 	else if (((Lenta[0] == PriesoSimbolis && Lenta[4] == PriesoSimbolis) || (Lenta[0] == PriesoSimbolis && Lenta[8] == PriesoSimbolis) || (Lenta[4] == PriesoSimbolis && Lenta[8] == PriesoSimbolis)) && (Lenta[0] != ManoSimbolis && Lenta[4] != ManoSimbolis && Lenta[8] != ManoSimbolis))
 	{
-		if (Lenta[0] == '1')
+		if (Lenta[0] == "1")
 			Lenta[0] = PriesoSimbolis;
-		else if (Lenta[4] == '5')
+		else if (Lenta[4] == "5")
 			Lenta[4] = PriesoSimbolis;
-		else if (Lenta[8] == '9')
+		else if (Lenta[8] == "9")
 			Lenta[8] = PriesoSimbolis;
 	}
 	else if (((Lenta[2] == PriesoSimbolis && Lenta[4] == PriesoSimbolis) || (Lenta[2] == PriesoSimbolis && Lenta[6] == PriesoSimbolis) || (Lenta[4] == PriesoSimbolis && Lenta[6] == PriesoSimbolis)) && (Lenta[2] != ManoSimbolis && Lenta[4] != ManoSimbolis && Lenta[6] != ManoSimbolis))
 	{
-		if (Lenta[2] == '3')
+		if (Lenta[2] == "3")
 			Lenta[2] = PriesoSimbolis;
-		else if (Lenta[4] == '5')
+		else if (Lenta[4] == "5")
 			Lenta[4] = PriesoSimbolis;
-		else if (Lenta[6] == '7')
+		else if (Lenta[6] == "7")
 			Lenta[6] = PriesoSimbolis;
 	}
 	else Ginyba();
@@ -354,7 +361,7 @@ void Zaidimas2::Puolimas()
 		Ikelimas();
 		cout << "   Jûs pralaimëjote. Þaisite dar kartà? (T/N): ";
 		cin >> Dar;
-		if (Dar == 'T' || Dar == 't')
+		if (Dar == "T" || Dar == "t")
 		{
 			Laimetojas = -1;
 			ManoSimbolis = '-';
@@ -363,11 +370,11 @@ void Zaidimas2::Puolimas()
 			setLenta();
 			Pasirinkimas();
 		}
-		if (Dar == 'N' || Dar == 'n')
+		if (Dar == "N" || Dar == "n")
 		{
 			Laimetojas = -1;
-			ManoSimbolis = '-';
-			PriesoSimbolis = '-';
+			ManoSimbolis = "-";
+			PriesoSimbolis = "-";
 			Ejimas = 1;
 			setLenta();
 			meniu.Pasirinkimas();
@@ -407,20 +414,20 @@ void Zaidimas2::PuolimasRandom()
 			Ikelimas();
 			cout << "   Jûs pralaimëjote. Þaisite dar kartà? (T/N): ";
 			cin >> Dar;
-			if (Dar == 'T' || Dar == 't')
+			if (Dar == "T" || Dar == "t")
 			{
 				Laimetojas = -1;
-				ManoSimbolis = '-';
-				PriesoSimbolis = '-';
+				ManoSimbolis = "-";
+				PriesoSimbolis = "-";
 				Ejimas = 1;
 				setLenta();
 				Pasirinkimas();
 			}
-			if (Dar == 'N' || Dar == 'n')
+			if (Dar == "N" || Dar == "n")
 			{
 				Laimetojas = -1;
-				ManoSimbolis = '-';
-				PriesoSimbolis = '-';
+				ManoSimbolis = "-";
+				PriesoSimbolis = "-";
 				Ejimas = 1;
 				setLenta();
 				meniu.Pasirinkimas();
@@ -459,7 +466,7 @@ int Zaidimas2::Tikrinimas()
 		return 1;
 	if (Lenta[2] == Lenta[4] && Lenta[4] == Lenta[6])
 		return 1;
-	if (Lenta[0] != '1' && Lenta[1] != '2' && Lenta[2] != '3' && Lenta[3] != '4' && Lenta[4] != '5' && Lenta[5] != '6' && Lenta[6] != '7' && Lenta[7] != '8' && Lenta[8] != '9')
+	if (Lenta[0] != "1" && Lenta[1] != "2" && Lenta[2] != "3" && Lenta[3] != "4" && Lenta[4] != "5" && Lenta[5] != "6" && Lenta[6] != "7" && Lenta[7] != "8" && Lenta[8] != "9")
 		return 0;
 	else
 		return -1;
@@ -470,20 +477,20 @@ void Zaidimas2::Lygiosios()
 	Ikelimas();
 	cout << "   Lygiosios. Þaisite dar karta? (T/N): ";
 	cin >> Dar;
-	if (Dar == 'T' || Dar == 't')
+	if (Dar == "T" || Dar == "t")
 	{
 		Laimetojas = -1;
-		ManoSimbolis = '-';
-		PriesoSimbolis = '-';
+		ManoSimbolis = "-";
+		PriesoSimbolis = "-";
 		Ejimas = 1;
 		setLenta();
 		Pasirinkimas();
 	}
-	if (Dar == 'N' || Dar == 'n')
+	if (Dar == "N" || Dar == "n")
 	{
 		Laimetojas = -1;
-		ManoSimbolis = '-';
-		PriesoSimbolis = '-';
+		ManoSimbolis = "-";
+		PriesoSimbolis = "-";
 		Ejimas = 1;
 		setLenta();
 		meniu.Pasirinkimas();

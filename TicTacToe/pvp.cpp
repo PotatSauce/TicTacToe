@@ -27,17 +27,23 @@ void Zaidimas1::Ikelimas()
 void Zaidimas1::Ivedimas()
 {
 	int Zaidejas(1), Vieta, Laimetojas;
-	char Simbolis, Dar;
+	string Simbolis, Dar;
 	do
 	{
 		Ikelimas();
 		Zaidejas = (Zaidejas % 2) ? 1 : 2;
 		cout << "   Şaidëjo " << Zaidejas << " ëjimas: ";
 		cin >> Vieta;
-		Simbolis = (Zaidejas == 1) ? 'X' : '0';
+		if (cin.fail())
+		{
+			cin.clear();
+			Ikelimas();
+			cin.get();
+		}
+		Simbolis = (Zaidejas == 1) ? "X" : "0";
 		if (1 <= Vieta && Vieta <= 9)
 		{
-			if (Lenta[Vieta - 1] != 'X' && Lenta[Vieta - 1] != '0')
+			if (Lenta[Vieta - 1] != "X" && Lenta[Vieta - 1] != "0")
 			{
 				Lenta[Vieta - 1] = Simbolis;
 			}
@@ -66,14 +72,14 @@ void Zaidimas1::Ivedimas()
 		Ikelimas();
 		cout << "   Şaidëjas " << Zaidejas - 1 << " laimëjo! Şaisite dar kartà? (T/N): ";
 		cin >> Dar;
-		if (Dar == 'T' || Dar == 't')
+		if (Dar == "T" || Dar == "t")
 		{
 			Laimetojas = -1;
 			Zaidejas = 1;
 			setLenta();
 			Ivedimas();
 		}
-		if (Dar == 'N' || Dar == 'n')
+		if (Dar == "N" || Dar == "n")
 		{
 			Laimetojas = -1;
 			Zaidejas = 1;
@@ -93,14 +99,14 @@ void Zaidimas1::Ivedimas()
 		Ikelimas();
 		cout << "   Lygiosios. Şaisite dar karta? (T/N): ";
 		cin >> Dar;
-		if (Dar == 'T' || Dar == 't')
+		if (Dar == "T" || Dar == "t")
 		{
 			Laimetojas = -1;
 			Zaidejas = 1;
 			setLenta();
 			Ivedimas();
 		}
-		if (Dar == 'N' || Dar == 'n')
+		if (Dar == "N" || Dar == "n")
 		{
 			Laimetojas = -1;
 			Zaidejas = 1;
@@ -135,7 +141,7 @@ int Zaidimas1::Tikrinimas()
 		return 1;
 	if (Lenta[2] == Lenta[4] && Lenta[4] == Lenta[6])
 		return 1;
-	if (Lenta[0] != '1' && Lenta[1] != '2' && Lenta[2] != '3' && Lenta[3] != '4' && Lenta[4] != '5' && Lenta[5] != '6' && Lenta[6] != '7' && Lenta[7] != '8' && Lenta[8] != '9')
+	if (Lenta[0] != "1" && Lenta[1] != "2" && Lenta[2] != "3" && Lenta[3] != "4" && Lenta[4] != "5" && Lenta[5] != "6" && Lenta[6] != "7" && Lenta[7] != "8" && Lenta[8] != "9")
 		return 0;
 	else
 		return -1;
@@ -143,13 +149,13 @@ int Zaidimas1::Tikrinimas()
 
 void Zaidimas1::setLenta()
 {
-	Lenta[0] = '1';
-	Lenta[1] = '2';
-	Lenta[2] = '3';
-	Lenta[3] = '4';
-	Lenta[4] = '5';
-	Lenta[5] = '6';
-	Lenta[6] = '7';
-	Lenta[7] = '8';
-	Lenta[8] = '9';
+	Lenta[0] = "1";
+	Lenta[1] = "2";
+	Lenta[2] = "3";
+	Lenta[3] = "4";
+	Lenta[4] = "5";
+	Lenta[5] = "6";
+	Lenta[6] = "7";
+	Lenta[7] = "8";
+	Lenta[8] = "9";
 }

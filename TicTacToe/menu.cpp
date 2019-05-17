@@ -24,17 +24,17 @@ void Meniu::Pasirinkimas()
 	Spausdinimas();
 	cout << "   Áveskite pasirinkimà: ";
 	cin >> Numeris;
-	if (1 == Numeris)
+	if ("1" == Numeris)
 	{
 		Zaidimas1 zaidimas1;
 		zaidimas1.Ivedimas();
 	}
-	if (2 == Numeris)
+	if ("2" == Numeris)
 	{
 		Zaidimas2 zaidimas2;
 		zaidimas2.Pasirinkimas();;
 	}
-	if (3 == Numeris)
+	if ("3" == Numeris)
 	{
 		exit(0);
 	}
