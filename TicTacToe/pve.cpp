@@ -1,5 +1,12 @@
 #include "pve.h"
 
+Zaidimas2::Zaidimas2()
+{
+	Ejimas = 1;
+	ManoSimbolis = "-";
+	PriesoSimbolis = "-";
+}
+
 void Zaidimas2::Ikelimas()
 {
 	system("cls");

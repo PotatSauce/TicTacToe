@@ -5,9 +5,11 @@
 class Zaidimas2 : public Zaidimas1
 {
 private:
-	int Laimetojas, Ejimas = 1;
-	string ManoSimbolis = "-", PriesoSimbolis = "-", Dar;
+	int Laimetojas, Ejimas;
+	string ManoSimbolis, PriesoSimbolis, Dar;
 public:
+	Zaidimas2();
+	~Zaidimas2() {};
 	virtual void Ivedimas();
 	virtual void Ikelimas();
 	virtual int Tikrinimas();
